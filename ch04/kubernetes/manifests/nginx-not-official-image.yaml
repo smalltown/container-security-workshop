@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-not-official-image
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: launcher.gcr.io/google/nginx1
+        resources:
+        resources:
+          requests:
+            memory: "30Mi"
+            cpu: "50m"
+          limits:
+            memory: "60Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 80

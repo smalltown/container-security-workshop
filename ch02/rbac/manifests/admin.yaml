@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin
+  namespace: rbac
+spec:
+  selector:
+    matchLabels:
+      app: admin
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: admin
+    spec:
+      serviceAccountName: rbac-admin
+      containers:
+      - name: admin
+        image: dtzar/helm-kubectl
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do echo hello; sleep 10;done"]

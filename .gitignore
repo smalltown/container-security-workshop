@@ -1,0 +1,17 @@
+# kubernetes related
+ch00/eks.yaml
+ch03/irsa/terraform/cluster-autoscaler-chart-values.yaml
+
+# terraform related
+**/.terraform
+*.tfstate
+*.tfstate.backup
+
+# opa kubernetes related
+webhook-configuration.yaml
+ca.crt
+ca.key
+ca.srl
+server.crt
+server.csr
+server.key

@@ -1,0 +1,7 @@
+{
+  "path": ["finance", "salary", "alice"],
+  "user": "bob",
+  "method": "GET",
+  "user_agent": "cURL/1.0",
+  "remote_addr": "127.0.0.1"
+}
